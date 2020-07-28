@@ -6,19 +6,18 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-class AppTest {
+class AppTests {
 
 	@BeforeEach
-	void setUp() throws Exception {
+	void setUp()  {
 	}
 
 	@AfterEach
-	void tearDown() throws Exception {
+	void tearDown(){
 	}
 
 	@Test
 	void test() {
-		fail("Not yet implemented");
 	}
 
 }
