@@ -78,8 +78,8 @@ class StockDomainObjectTests {
 
 	}
 
-	@Disabled
-	@Test
+
+    @Test
 	void testGetExchangeSymbol() {
 
 	}

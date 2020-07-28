@@ -5,9 +5,9 @@ import java.util.Objects;
 
 public class Stock {
 	//exchangeSymbol,companyName,exchangeMarket,marketCap,tradedAt,industrySector
-	
 	private long id;
-	private String exchangeSymbol;
+
+    private String exchangeSymbol;
 	private String companyName;
 	private String exchangeMarket;
 	private String marketCap;
