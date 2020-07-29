@@ -18,7 +18,7 @@ class StockDomainObjectTests {
 		Stock currentObject = new Stock("CFA", "VictoryShares US 500 Volatility Wtd ETF",
 				"NASDAQ", "$8.83M", "8159.86", "n/a");
 		
-		assertNotNull(currentObject.hashCode());
+		assertTrue(currentObject.hashCode()>0);
 	}
 
 

@@ -11,7 +11,7 @@ public interface FundFileRepository {
 
     Optional<FundFile> findPreviouslyReceivedFile(long fileId);
 
-    Optional<List<FundFile>> getReceivedFileForToday();
+    Optional<List<FundFile>> getReceivedFilesForToday();
 
 
 }

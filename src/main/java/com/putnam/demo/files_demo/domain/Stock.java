@@ -2,6 +2,7 @@ package com.putnam.demo.files_demo.domain;
 
 import java.time.Instant;
 import java.util.Objects;
+import java.util.StringJoiner;
 
 public class Stock {
 	//exchangeSymbol,companyName,exchangeMarket,marketCap,tradedAt,industrySector
@@ -105,33 +106,18 @@ public class Stock {
 				&& Objects.equals(industrySector, other.industrySector) && Objects.equals(marketCap, other.marketCap)
 				&& Float.floatToIntBits(tradedAt) == Float.floatToIntBits(other.tradedAt);
 	}
-	
+
 
 	@Override
 	public String toString() {
-		StringBuilder builder = new StringBuilder();
-		builder.append("Stock [getId()=");
-		builder.append(getId());
-		builder.append(", getExchangeSymbol()=");
-		builder.append(getExchangeSymbol());
-		builder.append(", getCompanyName()=");
-		builder.append(getCompanyName());
-		builder.append(", getExchangeMarket()=");
-		builder.append(getExchangeMarket());
-		builder.append(", getMarketCap()=");
-		builder.append(getMarketCap());
-		builder.append(", getTradedAt()=");
-		builder.append(getTradedAt());
-		builder.append(", getIndustrySector()=");
-		builder.append(getIndustrySector());
-		builder.append(", hashCode()=");
-		builder.append(hashCode());
-		builder.append("]");
-		return builder.toString();
+		return new StringJoiner(", ", Stock.class.getSimpleName() + "[", "]")
+				.add("id=" + id)
+				.add("exchangeSymbol='" + exchangeSymbol + "'")
+				.add("companyName='" + companyName + "'")
+				.add("exchangeMarket='" + exchangeMarket + "'")
+				.add("marketCap='" + marketCap + "'")
+				.add("tradedAt=" + tradedAt)
+				.add("industrySector='" + industrySector + "'")
+				.toString();
 	}
-	
-	
-	
-	
-
 }

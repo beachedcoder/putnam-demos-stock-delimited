@@ -6,6 +6,18 @@ import java.net.URL;
 import java.nio.file.Paths;
 
 public class FileReaderFactory {
+
+	public static StocksFileReader getFileData(String fileResourcePath){
+		if (fileResourcePath == null || fileResourcePath.isBlank()){
+			throw new IllegalArgumentException("Missing file path location.  Unable to process");
+		}
+		//determine file provider based on file path and then select build reader
+
+		return  null;
+	}
+
+
+
 	
 	public static StocksFileReader getStocksFile(String filePath) throws IllegalArgumentException, FileNotFoundException, URISyntaxException {
 

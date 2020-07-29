@@ -14,20 +14,16 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class StocksFileReaderTests {
 
-    private static ClassLoader currentClassContext;
+
     private static String resourcesLocation;
 
     @BeforeAll
     public static void setupClassLoaderForAllTests() {
-        //get class path context to enable file loading from resources
-
-        ClassLoader classLoader = ClassLoader.getSystemClassLoader();
         resourcesLocation = Paths.get("src", "test", "resources").toFile().getAbsolutePath();
         System.out.println(resourcesLocation);
     }
 
     private Path getFilePathResource(String fpResource) {
-//        return Paths.get((currentClassContext.getResource(fpResource)).toURI());
         return Paths.get(resourcesLocation, fpResource);
     }
 
